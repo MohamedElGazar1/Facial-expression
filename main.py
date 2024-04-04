@@ -65,5 +65,7 @@ def predict():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+# Run the Flask application with specified host and port
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Use the following line to run Flask app on PythonAnywhere
+    app.run(debug=True, host='0.0.0.0')
