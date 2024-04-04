@@ -2,7 +2,7 @@
     "builds": [{
         "src": "FacialExpressionYolo/main.py",
         "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.12" }
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     }],
     "routes": [
         {
@@ -13,7 +13,7 @@
     "rewrites": [
         {
             "src": "/(.*)",
-            "dest":"/"
+            "dest":"./main.py"
         }
     ]
 }
