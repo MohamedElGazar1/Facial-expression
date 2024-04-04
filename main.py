@@ -1,6 +1,6 @@
 import json
 from PIL import Image
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify
 from ultralytics import YOLO
 import io
 
@@ -44,10 +44,6 @@ def predict_yolo(image):
     except Exception as e:
         return str(e)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
-
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
@@ -68,11 +64,6 @@ def predict():
         return jsonify({'result': prediction_result}), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-
-# Handle 404 Not Found error
-@app.errorhandler(404)
-def not_found_error(error):
-    return render_template('test.html'), 404
 
 if __name__ == '__main__':
     app.run(debug=True)
