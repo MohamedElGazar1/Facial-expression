@@ -1,19 +1,19 @@
 {
     "builds": [{
-        "src": "FacialExpressionYolo/main.py",
+        "src": "main.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     }],
     "routes": [
         {
             "src": "/predict",
-            "dest":"./main.py"
+            "dest": "main.py"
         }
     ],
     "rewrites": [
         {
             "src": "/(.*)",
-            "dest":"./main.py"
+            "dest": "/main.py"
         }
     ]
 }
