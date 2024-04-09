@@ -71,7 +71,7 @@ import json
 app = Flask(__name__)
 
 # Load the YOLO model
-model = YOLO("facialexpressionmodel.pt")
+model = YOLO("FacialExpression.pt")
 
 # Function to preprocess image from base64 data
 def preprocess_image(base64_img):
