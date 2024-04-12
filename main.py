@@ -106,7 +106,7 @@ def predict_yolo(image):
         class_names2 = [obj['name'] for obj in class_names_list]
 
         class_names_string = ' and '.join(class_names2)
-        return class_names_string
+        return "yarab"
     except Exception as e:
         return str(e)
 
