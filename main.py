@@ -98,14 +98,14 @@ def preprocess_image(base64_img):
 def predict_yolo(image):
     try:
         # Perform YOLO prediction
-        results = model.predict(image)
-        xx = results[0].tojson()
-        class_names_list = json.loads(xx)
+        # results = model.predict(image)
+        # xx = results[0].tojson()
+        # class_names_list = json.loads(xx)
 
-        # Extract only the names
-        class_names2 = [obj['name'] for obj in class_names_list]
+        # # Extract only the names
+        # class_names2 = [obj['name'] for obj in class_names_list]
 
-        class_names_string = ' and '.join(class_names2)
+        # class_names_string = ' and '.join(class_names2)
         return "yarab"
     except Exception as e:
         return str(e)
